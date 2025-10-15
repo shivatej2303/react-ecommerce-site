@@ -1,0 +1,87 @@
+.no-products-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f8faff; /* Light background for the container */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 50px auto;
+  width: 300px;
+  margin-left: 500px;
+  margin-top: 10px;
+}
+
+.robot-image {
+  width: 200px; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 30px;
+  animation: bounce 2s infinite ease-in-out; /* Simple animation */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.message-box {
+  margin-bottom: 30px;
+}
+
+.message-box h2 {
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.message-box p {
+  font-size: 1.1em;
+  color: #666;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 20px; /* Space between buttons */
+}
+
+.browse-button,
+.home-button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.browse-button {
+  background-color: #79d395; /* Greenish */
+  color: white;
+  box-shadow: 0 4px 10px rgba(121, 211, 149, 0.4);
+}
+
+.browse-button:hover {
+  background-color: #6ac486;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(121, 211, 149, 0.5);
+}
+
+.home-button {
+  background-color: #9b95ea; /* Purplish */
+  color: white;
+  box-shadow: 0 4px 10px rgba(155, 149, 234, 0.4);
+}
+
+.home-button:hover {
+  background-color: #8c86dc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(155, 149, 234, 0.5);
+}
