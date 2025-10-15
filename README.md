@@ -45,11 +45,7 @@ Git
 Installation
 Clone the repository
 
-Replace [YOUR_GITHUB_USERNAME] with your actual GitHub username.
 
-Bash
-
-git clone https://github.com/[YOUR_GITHUB_USERNAME]/E-Shopping-Application.git
 Navigate to the project directory
 
 Bash
