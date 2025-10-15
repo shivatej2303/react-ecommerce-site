@@ -56,7 +56,7 @@ Make sure the following tools are installed on your system:
 
 **1. Clone the Repository**
 ```bash
-git clone https://github.com/yourusername/E-Shopping-Application.git
+git clone https://github.com/shivatej2303/react-ecommerce-site.git
 ```
 
 **2. Navigate to Project Directory**
