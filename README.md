@@ -1,13 +1,8 @@
 E-Shopping Application 🛒
 A full-stack e-commerce web application built with React and Redux. This project provides a simple and modern platform for users to browse products, manage a shopping cart, and proceed through a checkout process. It's designed for anyone looking for a clean, functional, and scalable e-commerce solution.
 
-🌐 Live Demo
-(This is one of the most important parts! After you deploy your site, put the link here.)
 
-[Your Live Demo URL Here]
-
-📸 Screenshot
-(A picture is worth a thousand words. Add a high-quality screenshot or GIF of your application's homepage or a key feature.)
+<img width="1845" height="972" alt="Image" src="https://github.com/user-attachments/assets/9ee8cbd9-3229-4bce-bd19-fb980043223f" />
 
 ✨ Key Features
 👤 User Authentication: Secure sign-up, login, and logout functionality to manage user sessions.
