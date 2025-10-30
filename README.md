@@ -7,6 +7,8 @@ From browsing curated products to completing secure checkouts — this project d
 > 💡 *Built with performance, scalability, and clean UI/UX in mind — perfect for developers, learners, and recruiters exploring full-stack craftsmanship.*
 
 ---
+🔗Try AURA Live: [Live Demo](https://react-ecommerce-site-git-main-shiva-teja-medojus-projects.vercel.app/)
+---
 
 ## ✨ Project Highlights
 
