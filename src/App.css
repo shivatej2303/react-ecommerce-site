@@ -65,7 +65,7 @@ body {
 
     .navbar {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* Center items for a cleaner look */
         gap: 15px;
         padding: 15px 20px;
     }
@@ -84,16 +84,19 @@ body {
     .search-input {
         width: 100%;
         max-width: none;
-        order: 3; /* Move search to the bottom of the column */
+        order: 3;
     }
 
-    .language-select {
+    /* Assuming .language-select and buttons are inside a container */
+    .navbar-actions {
+        display: contents; /* Allow children to be flex items of .navbar */
+    }
+
+    .navbar .signup-btn, .navbar .Cart-btn {
         order: 2;
-        align-self: flex-end;
     }
-
-    .navbar button {
-        order: 1;
+    .nav-links {
+        order: 4;
     }
 
     .nav-links {
@@ -116,7 +119,7 @@ body {
     .banner-text {
         left: 50%;
         width: 90%;
-        top: 50%;
+        top: 45%; /* Adjust vertical position */
     }
 
     .banner-text h1 {

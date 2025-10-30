@@ -17,7 +17,7 @@ function FurnitureSection() {
     // Define the async function to fetch data inside useEffect
     async function fetchData() {
       try {
-        const response = await fetch('https://api.escuelajs.co/api/v1/products?offset=0&limit=20');
+        const response = await fetch('https://api.escuelajs.co/api/v1/products?offset=0&limit=50');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

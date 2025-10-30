@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar";
 import { addToCart } from "../../redux/cartSlice";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { ProductsNotFound } from "./ProductsNotFound";
+
 
 function ElectronicsSection() {
   // State to store the fetched data, loading status, and any errors.
@@ -16,7 +18,7 @@ function ElectronicsSection() {
     // Define the async function to fetch data inside useEffect
     async function fetchData() {
       try {
-        const response = await fetch('https://api.escuelajs.co/api/v1/products?offset=0&limit=20');
+        const response = await fetch('https://api.escuelajs.co/api/v1/products?offset=0&limit=50');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -77,7 +79,7 @@ function ElectronicsSection() {
                 </div>
               ))
             ) : (
-              <p>No Electronic products found.</p>
+              <p><ProductsNotFound /></p>
             )}
           </div>
         </div>

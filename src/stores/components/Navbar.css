@@ -181,7 +181,7 @@
     position: absolute;
     top: 45%;
     left: 25%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -45%);
     color: white;
     text-align: center;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
@@ -213,10 +213,8 @@
     font-weight: bold;
     cursor: pointer;
     position: relative;
-    margin-top: 100px; /* Pushes it down from the text */
-    margin-right: 290px;
+    margin-top: 120px; /* Pushes it down from the text */
     transition: all 0.3s ease;
-    margin-top: 100px;
 
 }
 
