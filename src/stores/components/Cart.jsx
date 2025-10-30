@@ -1,13 +1,22 @@
 import React from "react";
 import { useSelector, useDispatch} from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { addToCart, removeFromCart, setShowCart, clearCart } from "../../redux/cartSlice";
 import './Cart.css'
 
 const CartItem = () =>{
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { itemList: cartItems, totalAmount } = useSelector((state) => state.cart);
 
-
+  /**
+   * Handles the checkout process by closing the cart and navigating to the checkout page.
+   */
+  const handleCheckout = () => {
+    dispatch(setShowCart(false)); // Close the cart modal
+    navigate('/checkout'); // Navigate to the checkout page
+  };
+  
   return (
     <div className="cart-overlay" onClick={() => dispatch(setShowCart())}>
       <div className="cart-modal" onClick={(e) => e.stopPropagation()}>
@@ -42,7 +51,11 @@ const CartItem = () =>{
          
          <div className="cart-footer">
            <div><h3 className="cart-total">Total: ${totalAmount.toFixed(2)}</h3></div>
-           <button className="checkout-btn">Proceed to Checkout</button>
+           <button 
+             className="checkout-btn" 
+             onClick={handleCheckout} 
+             disabled={cartItems.length === 0}
+           >Proceed to Checkout</button>
          </div>
          <button className="clear-cart-btn" onClick={() => dispatch(clearCart())}>Clear Cart</button>
         </div>

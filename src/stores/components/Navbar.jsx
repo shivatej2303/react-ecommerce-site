@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setShowCart } from "../../redux/cartSlice";
 import './Navbar.css'
-
 import CartItem from "./Cart";
 import { Signup } from "../../signup/Signup";
 import { Login } from "../../signup/Login";
@@ -29,6 +28,7 @@ const Navbar = () => {
         <div className="header-wrapper">
             {/* Main navbar container */}
             <div className="navbar">
+               <Link to={'/'}>
                 <div className="logo-container-wrapper">
                     <div className="logo-container">
                         <img src={logoImg} alt="AURA brand logo" className="logo-image" />
@@ -36,6 +36,7 @@ const Navbar = () => {
                     </div>
                     <p className="tagline">Where your aesthetic comes true</p>
                 </div>
+               </Link>
     
                 <div className="search">
                     <input type="text" className="search-input" placeholder="Search Aura.in" />

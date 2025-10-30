@@ -7,6 +7,7 @@ import ShoesSection from './stores/pages/Shoes'
 import MiscellaneousSection from './stores/pages/Miscellaneous'
 import ScrollToTop from './stores/components/ScrollToTop'
 import SingleProduct from './SingleProduct/SingleProduct'
+import Checkout from './stores/components/Checkout'
 
 import './App.css'
 
@@ -24,6 +25,7 @@ function App() {
         <Route path='/electronics' element={<ElectronicsSection />} />
         <Route path='/shoes' element={<ShoesSection />} />
         <Route path='/miscellaneous' element={<MiscellaneousSection />} />
+        <Route path='/checkout' element={<Checkout />} />
         
         {/* This is a dynamic route. The ":id" part is a URL parameter that will match any product ID. */}
         {/* It renders the SingleProduct component for a specific product. */}
