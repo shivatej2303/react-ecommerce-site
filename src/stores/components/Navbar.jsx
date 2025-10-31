@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import logoImg from '../../assets/AURA-logo.png';
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,6 +7,7 @@ import './Navbar.css'
 import CartItem from "./Cart";
 import { Signup } from "../../signup/Signup";
 import { Login } from "../../signup/Login";
+import { clearUser } from "../../redux/authSlice";
 
 
 const Navbar = () => {
@@ -14,6 +15,8 @@ const Navbar = () => {
     const dispatch = useDispatch();
     // useSelector hook to get cart visibility state and total quantity from the Redux store.
     const { showCart, totalQuantity } = useSelector((state) => state.cart);
+    // Get user state from the auth slice
+    const { user } = useSelector((state) => state.auth);
     // useState hooks to manage the visibility of the Signup and Login modals.
     const [showSignup, setShowSignup] = useState(false);
     const [showLogin, setShowLogin] = useState(false);
@@ -28,7 +31,7 @@ const Navbar = () => {
         <div className="header-wrapper">
             {/* Main navbar container */}
             <div className="navbar">
-               <Link to={'/'}>
+               <Link to={'/'} className="logo-link">
                 <div className="logo-container-wrapper">
                     <div className="logo-container">
                         <img src={logoImg} alt="AURA brand logo" className="logo-image" />
@@ -42,10 +45,17 @@ const Navbar = () => {
                     <input type="text" className="search-input" placeholder="Search Aura.in" />
                 </div>
     
-                {/* Signup button that opens the Signup modal */}
-                <div className="signup-button">
-                    <button className="signup-btn" onClick={() => setShowSignup(true)}>Signup</button>
-                </div>
+                {/* Conditionally render user info or signup button */}
+                {user ? (
+                    <div className="user-info">
+                        <span className="user-name">Hello, {user.name}</span>
+                        <button className="signup-btn" onClick={() => dispatch(clearUser())}>Logout</button>
+                    </div>
+                ) : (
+                    <div className="signup-button">
+                        <button className="signup-btn" onClick={() => setShowSignup(true)}>Signup</button>
+                    </div>
+                )}
 
                 {/* Cart button that shows the cart modal. It also displays the total quantity if > 0. */}
                 <button className="Cart-btn" onClick={() => dispatch(setShowCart())}>

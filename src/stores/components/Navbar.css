@@ -49,7 +49,11 @@
     color: var(--color-primary);
     font-family: var(--font-logo);
     text-decoration: none;
-    text-decoration: none !important; /* Ensure no underline from Link */
+}
+.logo-link,
+.logo-link * { /* Targets the link AND everything inside it */
+  text-decoration: none !important;
+  color: inherit !important;
 }
 
 .tagline {
@@ -58,7 +62,6 @@
     font-size: 12px;
     color: #7f8c8d;
     font-style: italic;
-    text-decoration: none !important; /* Ensure no underline from Link */
 }
 
 /* Search input styles */
@@ -97,6 +100,20 @@
     background-color: var(--color-primary);
     transform: translateY(-2px);
 }
+
+/* New styles for user info display */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-name {
+    font-weight: 500;
+    color: var(--color-primary);
+    font-size: 16px;
+}
+
 
 /* Cart button styles */
 .Cart-btn {
