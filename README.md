@@ -14,7 +14,7 @@ From browsing curated products to completing secure checkouts — this project d
 
 | Feature | Description |
 |----------|-------------|
-| 👤 **User Authentication** | Secure sign-up, login, and logout with session management. |
+| ⚛️ Core & Framework | React.js, JavaScript (ES6+), HTML5 (JSX). |
 | 🛍️ **Product Catalog** | Intuitive product listing with search and filtering for a seamless browsing experience. |
 | 📄 **Product Details** | Dedicated product view with rich descriptions, pricing, and high-quality imagery. |
 | 🛒 **Shopping Cart** | Add, update, and remove items — dynamically synced across user sessions. |
