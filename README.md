@@ -14,7 +14,7 @@ From browsing curated products to completing secure checkouts — this project d
 
 | Feature | Description |
 |----------|-------------|
-| ⚛️ Core & Framework | React.js, JavaScript (ES6+), HTML5 (JSX). |
+| 👤 **User Authentication** | Secure sign-up, login, and logout with session management. |
 | 🛍️ **Product Catalog** | Intuitive product listing with search and filtering for a seamless browsing experience. |
 | 📄 **Product Details** | Dedicated product view with rich descriptions, pricing, and high-quality imagery. |
 | 🛒 **Shopping Cart** | Add, update, and remove items — dynamically synced across user sessions. |
@@ -27,11 +27,13 @@ From browsing curated products to completing secure checkouts — this project d
 
 | Category | Technologies |
 |-----------|---------------|
-| 🖥️ **Frontend** | React.js |
+| 🖥️ **Frontend** | React.js, JavaScript(ES6+), HTML(via JSX |
 | 🔁 **State Management** | Redux Toolkit |
+| 🛣️ **Routing** | React Router (react-router-dom) |
 | 🎨 **Styling** | HTML5, CSS3 *(optionally compatible with Tailwind or Material-UI)* |
 | ⚙️ **Build Tool** | Vite |
-| 🌐 **API Communication** | Axios / Fetch API |
+| 🌐 **API Communication** | Browser Fetch API |
+| 💻 **Environment** | Node.js(npm/yarn) |
 
 ---
 
